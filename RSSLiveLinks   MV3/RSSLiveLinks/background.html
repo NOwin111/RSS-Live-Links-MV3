@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript" src="scripts/utilities.js"></script>
+<script type="text/javascript" src="scripts/tabrss.js"></script>
+<script type="text/javascript" src="scripts/feed.js"></script>
+<script type="text/javascript" src="scripts/bookmarks.js"></script>
+<script type="text/javascript" src="scripts/context.js"></script>
+<script type="text/javascript" src="scripts/background.js"></script>
+<script type="text/javascript" src="scripts/webWorker.js"></script>
+<script type="text/javascript" src="scripts/xmlhttp.js"></script>
+<script type="text/javascript" src="scripts/feedWorker.js"></script>
+<!-- 已移除重复的 <script src="background.js"> 引用：
+     之前 scripts/background.js 和根目录 background.js 被同时加载执行，
+     导致函数定义、事件监听器(如 chrome.runtime.onMessage)被注册两次，
+     这是角标数字跳变、逻辑互相覆盖的根本原因之一。
+     现在只保留 scripts/background.js 这一份，请确保它是最新修复版本。 -->
+
+<canvas id="canvas" width="19" height="19"></canvas>
+<audio id="audioNotify" src="sounds/boing.mp3"></audio>
+<img id="gfx" src="img/rssll_19x19.png" />
+<div id="translator" class="hidden"></div>
+
+</body>
+</html>
